@@ -14,4 +14,33 @@ div img{
     justify-content: center;
     align-items: center;
     text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
 }
+
+div a{
+    margin: 5px;
+}
+
+.transbox {
+    display: flex;
+    justify-content: center;
+    opacity: 0.6;
+  }
+
+  .box {
+    display: flex;
+    align-items:center;
+ }
+
+ .card:hover {
+    transform: scale(1.1);
+  }
+
+  .card {
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 0;
+    border: 0;
+  }
