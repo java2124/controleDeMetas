@@ -1,0 +1,24 @@
+nav{
+    background-color: #7D21A7;
+}
+
+body{
+    background-color: #4b2273;   
+    background-image: linear-gradient(to right, #6b2cf5 , #d450e6)
+}
+
+h3{
+    color:#fefddd;
+}
+
+div img{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+#link {
+    text-decoration: none;
+    color: black;
+}
