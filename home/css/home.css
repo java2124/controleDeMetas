@@ -3,7 +3,6 @@ nav{
 }
 
 body{
-    background-color: #4b2273;   
     background-image: linear-gradient(to right, #6b2cf5 , #d450e6)
 }
 
@@ -17,8 +16,30 @@ div img{
     text-align: center;
 }
 
-
 #link {
     text-decoration: none;
     color: black;
 }
+
+.texto-Apresentacao{
+    color: white;
+}
+
+.n-metas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-metas{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #5215fc;
+    color: white;
+}
+
+.box {
+    display: flex;
+    align-items:center;
+ }
