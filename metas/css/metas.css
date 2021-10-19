@@ -108,3 +108,9 @@ div a{
     margin-bottom:20px;
     background: #5215fc;
 }
+
+.centro {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
