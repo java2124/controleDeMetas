@@ -18,20 +18,62 @@ form{
 form h3, form p{
     text-align: center
 }
+form img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+}
 
-form input[type=text],form input[type=password]{
+form input[type=email],form input[type=password]{
     width: 100%;
     height: 45px;
     border: 1px solid;
+    border-radius: 20px;
     padding-left: 10px;
     margin: 10px 0;
 }
 
-form input[type="submit"]{
+input[type="email"]::placeholder {                 
+    text-align: center;
+}
+
+input[type="password"]::placeholder {                 
+    text-align: center;
+}
+
+form input[type="submit"], form input[type="button"]{
     width: 100%;
     height: 40px;
     cursor: pointer;
-    background: #f27f3d;
+    background: #6b2cf5;
     border:0;
     border-radius: 20px;
+    color: white;
+}
+
+
+h5{
+    color: white;
+   text-align: center;
+}
+
+
+a:link, a:visited {
+    color: white;
+    text-decoration: underline;
+    cursor: auto;
+  }
+  
+  a:link:active, a:visited:active {
+    color: #6b2cf5;
+  }
+
+.s-login .msg-account:after, .s-login .msg-account:before {
+    content: '';
+    width: 81px;
+    opacity: 0.2;
+    border-top: 1px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 122px;
+    display: inline-block;
 }
