@@ -96,8 +96,8 @@ div a{
 .saveProgress {
     width: 50%;
     color: white; 
-    margin-left: 100px;
-    margin-bottom:20px;
+    float: right;
+    margin-right: 10%;
     background: #5215fc;
 }
 
