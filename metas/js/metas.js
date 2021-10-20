@@ -46,7 +46,7 @@ $(function(){
         $(".divButtonFooter").toggle();
         $('#metaProgresso').val("");
         $('.modal').modal('hide'); 
-        $(".alerta").append('<div class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div>Seu progresso foi salvo com sucesso!</div><button type="button" class="btn close" data-dismiss="alert" aria-label="Close" style="margin-left: 70%;"><img src = "img/close.svg"></button></div>');
+        $(".alerta").append('<div style= "display: flex; align-items: center" class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div style="width: 90%;">Seu progresso foi salvo com sucesso!</div><div style="width: 10%; padding-right: 5px;"><button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><img src = "img/close.svg"></button></div></div>');
     });
 });
 
@@ -146,7 +146,7 @@ $(function(){
             fieldCurrent = false;
         }
 
-        $(".alerta").append('<div class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div>Sua meta foi cadastrada com sucesso!</div><button type="button" class="btn close" data-dismiss="alert" aria-label="Close" style="margin-left: 70%;"><img src = "img/close.svg"></button></div>');
+        $(".alerta").append('<div style= "display: flex; align-items: center" class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div style="width: 90%;">Sua meta foi cadastrada com sucesso!</div><div style="width: 10%; padding-right: 5px;"><button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><img src = "img/close.svg"></button></div></div>');
     });
 });
 
@@ -154,7 +154,7 @@ $(function(){
     $('.buttonDeleteSave').click(function(){
         $('.modal').modal('hide'); 
         $('#metaProgresso').val("");
-        $(".alerta").append('<div class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div>Sua meta foi deletada com sucesso!</div><button type="button" class="btn close" data-dismiss="alert" aria-label="Close" style="margin-left: 70%;"><img src = "img/close.svg"></button></div>');
+        $(".alerta").append('<div style= "display: flex; align-items: center" class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div style="width: 90%;">Sua meta foi deletada com sucesso!</div><div style="width: 10%; padding-right: 5px;"><button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><img src = "img/close.svg"></button></div></div>');
     });
 });
 
