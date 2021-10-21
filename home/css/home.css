@@ -9,6 +9,10 @@ body{
 h3{
     color:#fefddd;
 }
+p{
+    font-size: 20px;
+    color: white;
+}
 
 div img{
     justify-content: center;
@@ -43,3 +47,12 @@ div img{
     display: flex;
     align-items:center;
  }
+
+.cont-img{
+    padding-left: 10%;
+    padding-bottom: 5%;
+}
+
+.cont-text{
+    padding-right: 10%;
+}
