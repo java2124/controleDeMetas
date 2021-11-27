@@ -9,22 +9,30 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/home.css">
+    <?php
+    session_start();
+    if (empty($_SESSION['email']) && empty($_SESSION['senha'])) {
+        header("Location:../login/login.php");
+        echo "<script>alert('Não foi possível fazer login,usuário ou senha inválidos')</script>";
+    }
+    ?>
 </head>
 
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
-            <img src="../img/goal.png" alt="" height="60" class="d-inline-block align-text-top"
-                style="margin-left: 5px;">
+            <img src="../img/goal.png" alt="" height="60" class="d-inline-block align-text-top" style="margin-left: 5px;">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="Navbar">
                 <div class="navbar-nav">
-                    <a class="nav-link active" href="../home/index.html">Pagina Inicial</a>
-                    <a class="nav-link" aria-current="page" href="../metas/metas.html">Minhas Metas</a>
-                    <a class="nav-link" href="../login/login.html">Sair</a>
+                    <a class="nav-link active" href="../home/index.php">Pagina Inicial</a>
+                    <a class="nav-link" aria-current="page" href="../metas/metas.php">Minhas Metas</a>
+                    <form method="post" action="/controleDeMetas/controle/controle_cliente.php">
+                        <input class="btn nav-link b1" type="submit" name="bt_sair" value="Sair">
+                    </form>
                 </div>
             </div>
         </div>

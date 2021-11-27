@@ -6,20 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
+
 </head>
 
 <body>
-    <form>
+    <form method="post" action="/controleDeMetas/controle/controle_cliente.php">
         <img src="../img/goal.png" width="80px">
         <input type="email" name="email" placeholder="Digite seu email" required />
-        <input type="password" name="password" placeholder="Digite a senha" required />
-        <input type="submit" class="btn" name="botaoLogin" value="Login">
+        <input type="password" name="senha" placeholder="Digite a senha" required />
+        <input type="submit" class="btn" name="bt_logar" value="Login">
         <hr>
         <h5>Ainda não tem uma conta?</h5>
-        <a href="../cadastro/cadastro.html" style="display: block;">
+        <a href="../cadastro/cadastro.php" style="display: block;">
             <input class="btn" type="button" value="Criar conta">
         </a>
     </form>

@@ -12,16 +12,15 @@
 </head>
 
 <body>
-    <form>
+    <form method="post" action="/controleDeMetas/controle/controle_cliente.php">
         <h3>Cadastro</h3>
-        <input type="text" name="NomeResponsavel" placeholder="Digite o seu nome"  required/>
-        <input type="text" name="NomeEmpresa" placeholder="Digite o nome da empresa" required/>
-        <input type="email" name="email" placeholder="Digite seu email" required/>
-        <input type="text" id="phone" name="phone" placeholder=" Tel. formato: 11 99999-9999"
-            pattern="[0-9]{2} [0-9]{5}-[0-9]{4}" required>
-        <input type="password" name="password" placeholder="Digite a senha" required/> <br><br>
-            <input type="submit" name="acao" value="Enviar">
-            <br><br>
+        <input type="text" name="nome" placeholder="Digite o seu nome" required />
+        <input type="text" name="empresa" placeholder="Digite o nome da empresa" required />
+        <input type="email" name="email" placeholder="Digite seu email" required />
+        <input type="text" id="telefone" name="telefone" placeholder=" Tel. formato: 11 99999-9999" required>
+        <input type="password" name="senha" placeholder="Digite a senha" required /> <br><br>
+        <input type="submit" name="bt_cadastrar" value="Enviar">
+        <br><br>
     </form>
 
     <script src="/JQuery/jquery-3.6.0.js"></script>

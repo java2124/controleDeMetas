@@ -7,14 +7,21 @@ body{
 }
 
 h3{
-    color:#fefddd;
+    color:white;
 }
 p{
     font-size: 20px;
     color: white;
 }
+.b1 {
+    border: none;
+    background: none;
+    background: unset !important;
+    border: unset !important;
+    outline: unset !important;
+}
 
-div img{
+.logoMetas{
     justify-content: center;
     align-items: center;
     text-align: center;
