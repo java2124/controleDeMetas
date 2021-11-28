@@ -28,6 +28,7 @@
             <div class="collapse navbar-collapse" id="Navbar">
                 <div class="navbar-nav">
                     <a class="nav-link" href="../home/index.php">Pagina Inicial</a>
+                    <a class="nav-link" href="../updateDados/update.php">Alterar cadastro</a>
                     <a class="nav-link active" aria-current="page" href="../metas/metas.php">Minhas Metas</a>
                     <form method="post" action="/controleDeMetas/controle/controle_cliente.php">
                         <input class="btn nav-link b1" type="submit" name="bt_sair" value="Sair">
