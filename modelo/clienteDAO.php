@@ -78,4 +78,20 @@ class clienteDAO
         unset($_SESSION);
         header("Location:../visao/login/login.php");
     }
+    function atualizar($id, $empresa, $email, $telefone, $senha)
+    {
+        try {
+            $pdo = new PDO('mysql:host=localhost;dbname=controledemetas', "root", "");
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $stmt = $pdo->prepare("UPDATE clientes SET empresa='$empresa',email='$email',telefone='$telefone',senha='$senha' WHERE id='$id'");
+            $stmt->execute(array(
+                ':empresa' => "$empresa", ':email' => "$email", ':telefone' => "$telefone", ':senha' => "$senha"
+            ));
+            echo "<script>alert('Atualizado com sucesso!');
+            window.location = '../visao/updateDados/update.php';
+            </script>";
+        } catch (PDOException $e) {
+            echo 'Error: ' . $e->getMessage();
+        }
+    }
 }
