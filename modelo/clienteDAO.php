@@ -85,7 +85,7 @@ class clienteDAO
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $stmt = $pdo->prepare("UPDATE clientes SET empresa='$empresa',email='$email',telefone='$telefone',senha='$senha' WHERE id='$id'");
             $stmt->execute(array(
-                ':empresa' => "$empresa", ':email' => "$email", ':telefone' => "$telefone", ':senha' => "$senha"
+                ':empresa' => "$empresa", ':email' => "$email", ':telefone' => "$telefone", ':senha' => "$senha", ':id' => "$id"
             ));
             echo "<script>alert('Atualizado com sucesso!');
             window.location = '../visao/updateDados/update.php';
