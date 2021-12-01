@@ -18,7 +18,7 @@
         <input type="email" name="email" placeholder="Digite seu email" required />
         <input type="text" id="telefone" name="telefone" placeholder=" Tel. formato: 11 99999-9999" required>
         <input type="password" name="senha" placeholder="Digite a senha" required /> <br><br>
-        <input type="submit" name="bt_cadastrar" value="Enviar">
+        <input type="submit" name="bt_update" value="Enviar">
         <br><br>
     </form>
 

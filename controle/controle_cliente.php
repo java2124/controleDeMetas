@@ -15,3 +15,6 @@ if (isset($_POST['bt_logar'])) {
 if (isset($_POST['bt_sair'])) {
     $clienteDAO->Logout();
 }
+if (isset($_POST['bt_update'])) {
+    $clienteDAO->update($_POST['id']);
+}
