@@ -78,4 +78,21 @@ class clienteDAO
         unset($_SESSION);
         header("Location:../visao/login/login.php");
     }
+    function update($id) {
+        try {
+        $pdo = new PDO("mysql:host=localhost;dbname=controledemetas", "root", "");
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $consulta = $pdo->query("SELECT id, nome, empresa, email, telefone, senha FROM cliente WHERE id = '$id'");
+        while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+        session_start();
+        include_once("../modelo/cliente.php");
+        $cliente = new Cliente($linha['id'], $linha['nome'], $linha['empresa'], $linha['email'],
+         $linha['telefone'],$linha['senha']);
+        $_SESSION['obj_cliente'] = serialize($cliente);
+       header("location:../visao/home/index.php");
+        }
+        } catch (PDOException $e) {
+        echo 'Error: ' . $e->getMessage();
+        } }
+       
 }
