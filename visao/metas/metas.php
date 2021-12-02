@@ -53,88 +53,11 @@
 
         <!-- Cards Container-->
         <div class="row row-cols-1 row-cols-md-3 g-4 centro" style="margin-top: 10px;">
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">10 mil reais de lucro no mês 10
-                        </h5>
-                        <p class="card-text">Conseguir margem de lucro de 10 mil reais em cima das vendas do mês de
-                            outubro.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a short card.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col" style="width: 15rem; margin: 10px;">
-                <div class="card h-100" type="button">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a longer card with supporting text below as a natural lead-in to
-                            additional content.</p>
-                    </div>
-                </div>
-            </div>
+            <?php
+            include_once("/xampp/htdocs/controleDeMetas/modelo/metasDAO.php");
+            $meta = new metasDAO();
+            $meta->buscaMetas($_SESSION['id'])
+            ?>
         </div>
 
         <footer class="jumbotron" style="margin-top: 50px;">
@@ -157,14 +80,14 @@
                     <!-- Cabeçalho do modal -->
                     <div class="modal-header">
                         <img src="img/trophy.png" style="width: 35px; margin-right: 10px;">
-                        <h5 class="modal-title">10 mil reais de lucro no mês 10</h5>
+                        <h5 class="modal-title">{title}</h5>
                         <button type="button" class="btn close" style="padding-top: 0;"><img src="img/close.svg"></button>
                     </div>
 
-                    <!-- Corpo do modal -->
+                    <!-- Corpo do modal (Detalhes) -->
                     <div class="modal-body body">
-                        <p>Conseguir margem de lucro de 10 mil reais em cima das vendas do mês de outubro.</p>
-                        <p>Tipo de progresso: Numérico</p>
+                        <p>{description}</p>
+                        <p id="tp_meta"></p>
                         <br>
                         <div class="progress">
                             <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width: 75%">
@@ -228,15 +151,16 @@
                     </div>
 
                     <!-- Corpo do modal -->
-                    <form class="metas">
+                    <form class="metas" method="post" action="/controleDeMetas/controle/controle_metas.php">
                         <div class="modal-body body">
                             <div class="form-group">
+                                <input type='hidden' name='id_cliente' value="<?php echo $_SESSION['id']; ?>" />
                                 <label for="exampleInputText">O nome da minha meta é...</label>
-                                <input class="form-control" type="text" placeholder="nome da meta" id="nameMeta" maxlength="45" required>
+                                <input class="form-control" type="text" placeholder="nome da meta" id="nameMeta" name="nameMeta" maxlength="45" required>
                             </div>
                             <div class="form-group">
                                 <label for="selectType">O tipo da minha meta é...</label>
-                                <select class="form-control" id="selectType" required>
+                                <select class="form-control" id="selectType" name="selectType" required>
                                     <option value="">Escolher...</option>
                                     <option value="number">Numérica</option>
                                     <option value="current">Moeda</option>
@@ -249,7 +173,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="description">Descrevendo a minha meta...</label>
-                                <textarea class="form-control" id="description" rows="3" maxlength="160" required></textarea>
+                                <textarea class="form-control" id="description" name="description" rows="3" maxlength="160" required></textarea>
                             </div>
                         </div>
 

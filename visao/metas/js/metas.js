@@ -4,6 +4,9 @@ var fieldNumber = false;
 var fieldCurrent = false;
 var appendCurrent = false;
 var appendNumber = false;
+var title = '';
+var description = '';
+
 /*
 $(function () {
     $('form').on('submit', function (e) {
@@ -37,13 +40,13 @@ $(function () {
     });
 });
 
-$(function () {
+/* $(function () {
     $(".card-body").click(function (e) {
         $("#meuModal").modal("show");
     });
-});
+}); */
 
-$(function () {
+/* $(function () {
     $(document).on('click', '.saveProgress', function () {
         cont2 = true;
         $(".progresso").toggle();
@@ -55,8 +58,8 @@ $(function () {
         $('.modal').modal('hide');
         $(".alerta").append('<div style= "display: flex; align-items: center" class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div style="width: 90%;">Seu progresso foi salvo com sucesso!</div><div style="width: 10%; padding-right: 5px;"><button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><img src = "img/close.svg"></button></div></div>');
     });
-});
-
+}); */
+/* 
 $(function () {
     $(document).on('click', '.backProgress', function () {
         cont2 = true;
@@ -66,9 +69,9 @@ $(function () {
         $(".divButtonFooter2").toggle();
         $(".divButtonFooter").toggle();
     });
-});
+}); */
 
-$(function () {
+/* $(function () {
     $(".close").click(function (e) {
         e.preventDefault();
         if (!cont2) {
@@ -81,7 +84,7 @@ $(function () {
         }
     });
 });
-
+ */
 $(function () {
     $('#selectType').change(function () {
         var tipo = $(this).val();
@@ -90,7 +93,7 @@ $(function () {
             if (!appendNumber) {
                 appendNumber = true;
                 fieldNumber = true;
-                $(".formulario").append('<div class="showNumber"><label>Qual o valor da meta?</label> <input type="number" id="progressNumber" min="1" class = "form-control" style="width:30%;" required/></div>');
+                $(".formulario").append('<div class="showNumber"><label>Qual o valor da meta?</label> <input type="number" id="progressNumber" name="progressCurrent" min="1" class = "form-control" style="width:30%;" required/></div>');
             } else {
                 $("#progressNumber").attr('required', 'required');
                 fieldNumber = true;
@@ -106,7 +109,7 @@ $(function () {
             if (!appendCurrent) {
                 appendCurrent = true;
                 fieldCurrent = true;
-                $(".formulario").append('<div class="showCurrent"><label>Qual o valor da meta?</label> <input type="number" id="progressCurrent" min="1.00" max="10000.00" step="0.50" class = "form-control" style="width:30%;" required/></div>');
+                $(".formulario").append('<div class="showCurrent"><label>Qual o valor da meta?</label> <input type="number" id="progressCurrent" name="progressCurrent" min="1.00" max="10000.00" step="0.50" class = "form-control" style="width:30%;" required/></div>');
             } else {
                 $("#progressCurrent").attr('required', 'required');
                 $(".showCurrent").toggle();
@@ -134,36 +137,41 @@ $(function () {
     });
 });
 
-$(function () {
+/* $(function () {
     $('.metas').on('submit', function (e) {
         e.preventDefault();
-        $('.modal').modal('hide');
-        $('#nameMeta').val("");
-        $('#selectType').val("");
-        $('#description').val("");
-        if (fieldNumber) {
-            $("#progressNumber").removeAttr('required');
-            $(".showNumber").toggle();
-            fieldNumber = false;
-        }
 
-        if (fieldCurrent) {
-            $("#progressCurrent").removeAttr('required');
-            $(".showCurrent").toggle();
-            fieldCurrent = false;
-        }
+        setTimeout(function () {
+            $('#nameMeta').val();
+            $('.modal').modal('hide');
+            $('#nameMeta').val("");
+            $('#selectType').val("");
+            $('#description').val("");
+            if (fieldNumber) {
+                $("#progressNumber").removeAttr('required');
+                $(".showNumber").toggle();
+                fieldNumber = false;
+            }
 
-        $(".alerta").append('<div style= "display: flex; align-items: center" class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div style="width: 90%;">Sua meta foi cadastrada com sucesso!</div><div style="width: 10%; padding-right: 5px;"><button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><img src = "img/close.svg"></button></div></div>');
+            if (fieldCurrent) {
+                $("#progressCurrent").removeAttr('required');
+                $(".showCurrent").toggle();
+                fieldCurrent = false;
+            }
+
+            $(".alerta").append('<div style= "display: flex; align-items: center" class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div style="width: 90%;">Sua meta foi cadastrada com sucesso!</div><div style="width: 10%; padding-right: 5px;"><button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><img src = "img/close.svg"></button></div></div>');
+        }, 10000);
+
     });
-});
-
+}); */
+/* 
 $(function () {
     $('.buttonDeleteSave').click(function () {
         $('.modal').modal('hide');
         $('#metaProgresso').val("");
         $(".alerta").append('<div style= "display: flex; align-items: center" class="alert alert-success alert-dismissible fade show" role="alert" style="align-items: center; display: flex; padding-right: 0;"><div style="width: 90%;">Sua meta foi deletada com sucesso!</div><div style="width: 10%; padding-right: 5px;"><button type="button" class="btn close" data-dismiss="alert" aria-label="Close"><img src = "img/close.svg"></button></div></div>');
     });
-});
+}); */
 
 $(function () {
     $('.close').click(function () {
