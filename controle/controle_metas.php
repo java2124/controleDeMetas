@@ -16,5 +16,13 @@ if (isset($_POST['salvar'])) {
 }
 
 if (isset($_POST['bt_excluir'])) {
-        $metasDAO->excluir($_POST['id_meta']);
+    $metasDAO->excluir($_POST['id_meta']);
+}
+
+if (isset($_POST['bt_editar'])) {
+    $metasDAO->editar($_POST['id_meta']);
+}
+
+if (isset($_POST['salvar_alteracao'])) {
+    $metasDAO->salvarMeta($_POST['id_meta'], $_POST['selectType'], $_POST['nome_meta'], $_POST['description'], $_POST['valor_meta'], $_POST['id_cliente']);
 }

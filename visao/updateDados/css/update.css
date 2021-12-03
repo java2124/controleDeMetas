@@ -1,50 +1,122 @@
-*{margin: 0; padding: 0; box-sizing: border-box;}
-body{
-    background-color: #4b2273;   
+
+/* Atualizar Meta*/
+nav{
+    background-color: #7D21A7;
+}
+
+body{   
     background-image: linear-gradient(to right, #6b2cf5 , #d450e6)
 }
 
-form{
-    background-image: linear-gradient(to right, #6b2cf5,#d450e6);
-    max-width: 500px;
-    width: 70%;
-    padding: 20px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%)
-}
-
-form h3, form p{
-    text-align: center
-}
-
-form input[type=text],form input[type=password],form input[type=email]{
-    width: 100%;
-    height: 45px;
-    border: 1px solid;
-    border-radius: 20px;
-    padding-left: 10px;
-    margin: 10px 0;
-}
-
-input[type="text"]::placeholder {                 
-    text-align: center;
-}
-input[type="email"]::placeholder {                 
-    text-align: center;
-}
-input[type="password"]::placeholder {                 
-    text-align: center;
-}
-
-
-form input[type="submit"]{
-    width: 100%;
-    height: 40px;
-    cursor: pointer;
-    background: #6b2cf5;
-    border:0;
-    border-radius: 20px;
+h3{
     color: white;
+}
+
+.form-group {
+    margin-top: 10px;
+}
+
+.modalCreateShow {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+.transbox {
+    display: flex;
+    justify-content: center;
+    opacity: 0.6;
+  }
+
+  .box {
+    display: flex;
+    align-items:center;
+ }
+
+ .card:hover {
+    transform: scale(1.1);
+  }
+
+  .card {
+    transition: transform 0.2s ease;
+    box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18);
+    border-radius: 0;
+    border: 0;
+  }
+
+.modalCss {
+    background-image: linear-gradient(to right, #6b2cf5 , #d450e6);
+}
+
+.buttonExcluir {
+    background: #5215fc;
+    color: white;
+}
+
+.buttonExcluirDanger {
+    background: #DA4453;
+    color: white;
+    float: left;
+}
+.buttonEditarSucess{
+    background: #46b53c;
+    color: white;
+    float: right;
+}
+
+
+.divButtonFooter {
+    width: 50%;
+}
+
+.divButtonFooter2 {
+    width: 50%;
+}
+
+.buttonProgress {
+    background: #5215fc;
+    color: white;
+    float: right;
+}
+
+.buttonSaveMeta {
+    background: #5215fc;
+    color: white;
+}
+
+.buttonDeleteSave {
+    background: #5215fc;
+    color: white;
+    float: right;
+}
+
+.body {
+    color: white;
+}
+
+.saveProgress {
+    width: 50%;
+    color: white; 
+    float: right;
+    margin-right: 10%;
+    background: #5215fc;
+}
+
+.backProgress {
+    width: 50%;
+    color: white; 
+    margin-left: 20px;
+    margin-bottom:20px;
+    background: #5215fc;
+}
+
+.centro {
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }

@@ -28,7 +28,6 @@
             <div class="collapse navbar-collapse" id="Navbar">
                 <div class="navbar-nav">
                     <a class="nav-link" href="../home/index.php">Pagina Inicial</a>
-                    <a class="nav-link" href="../updateDados/update.php">Alterar cadastro</a>
                     <a class="nav-link active" aria-current="page" href="../metas/metas.php">Minhas Metas</a>
                     <form method="post" action="/controleDeMetas/controle/controle_cliente.php">
                         <input class="btn nav-link b1" type="submit" name="bt_sair" value="Sair">
@@ -161,7 +160,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="selectType">O tipo da minha meta é...</label>
-                                <select class="form-control" id="selectType" name="selectType" required>
+                                <select class="form-control" id="selectType" name="selectType">
                                     <option value="">Escolher...</option>
                                     <option value="number">Numérica</option>
                                     <option value="current">Moeda</option>

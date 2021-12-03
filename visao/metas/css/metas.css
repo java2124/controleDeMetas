@@ -61,6 +61,12 @@ h3{
     color: white;
     float: left;
 }
+.buttonEditarSucess{
+    background: #46b53c;
+    color: white;
+    float: right;
+}
+
 
 .divButtonFooter {
     width: 50%;
